@@ -1,5 +1,10 @@
 import random
-from micrograd.engine import Value
+
+try:
+    from .engine import Value
+except ImportError:
+    # Allow `nn.py` and scripts that import it to run from this directory.
+    from engine import Value
 
 class Module:
 
