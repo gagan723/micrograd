@@ -24,7 +24,8 @@ work under the hood.
 micrograd/
 |-- engine.py   # Value class and automatic differentiation
 |-- nn.py       # Module, Neuron, Layer, and MLP classes
-|-- train_mlp.py # Ready-to-run MLP training example
+|-- train_mlp.py # Three-feature MLP classification example
+|-- train_xor.py # MLP example that learns the XOR function
 `-- README.md
 ```
 
@@ -43,6 +44,15 @@ python train_mlp.py
 The script creates an MLP, trains it on a small classification dataset, shows
 the loss during training, and prints its final predictions. You can edit the
 dataset, network shape, epoch count, and learning rate in `train_mlp.py`.
+
+For a second example, train an MLP on the XOR function:
+
+```bash
+python train_xor.py
+```
+
+This example demonstrates why an MLP needs hidden nonlinear layers to learn a
+classification problem that a single linear neuron cannot represent.
 
 ## Getting started
 
