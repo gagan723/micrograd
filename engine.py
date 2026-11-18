@@ -65,6 +65,15 @@ class Value:
 
         return out
 
+    def exp(self):
+        out = Value(math.exp(self.data), (self,), 'exp')
+
+        def _backward():
+            self.grad += out.data * out.grad
+        out._backward = _backward
+
+        return out
+
     def backward(self):
 
         # topological order all of the children in the graph
