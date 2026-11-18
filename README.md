@@ -25,6 +25,7 @@ micrograd/
 |-- engine.py   # Value class and automatic differentiation
 |-- nn.py       # Module, Neuron, Layer, and MLP classes
 |-- train_mlp.py # Three-feature MLP classification example
+|-- train_regression.py # Linear regression example
 |-- train_xor.py # MLP example that learns the XOR function
 `-- README.md
 ```
@@ -53,6 +54,15 @@ python train_xor.py
 
 This example demonstrates why an MLP needs hidden nonlinear layers to learn a
 classification problem that a single linear neuron cannot represent.
+
+To train a single linear neuron to learn `y = 2x + 1`, run:
+
+```bash
+python train_regression.py
+```
+
+This regression example prints the training loss, final predictions, and the
+learned weight and bias.
 
 ## Getting started
 
